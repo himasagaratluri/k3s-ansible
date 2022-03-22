@@ -1,4 +1,10 @@
 ---
+- name: Install Iptables
+  package:
+    name:
+      - iptables-persistent
+    state: present
+
 - name: Set SELinux to disabled state
   selinux:
     state: disabled
